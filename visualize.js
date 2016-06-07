@@ -65,8 +65,8 @@ function draw_second(data) {
 
 
     var margin = {top: 10, right: 50, bottom: 20, left: 50},
-    width = 250 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    width = 350 - margin.left - margin.right,
+    height = 1000 - margin.top - margin.bottom;
 
     var min = Infinity,
         max = -Infinity;
@@ -85,8 +85,8 @@ function draw_third(csv) {
     var data = [];
 
     csv.forEach(function(x) {
-      var e = Math.floor(x.Expt - 1),
-          s = Math.floor(x.Speed),
+      var e = Math.floor(x.Survived),
+          s = Math.floor(x.Fare),
           d = data[e];
       if (!d) d = data[e] = [s];
       else d.push(s);
@@ -107,9 +107,6 @@ function draw_third(csv) {
       .append("g")
         .call(chart);
   
-    setInterval(function() {
-      svg.datum(randomize).call(chart.duration(1000));
-    }, 2000);
 
 };
 
@@ -117,13 +114,6 @@ function draw_third(csv) {
 
 
 
-
-
-
-function randomize(d) {
-  if (!d.randomizer) d.randomizer = randomizer(d);
-  return d.map(d.randomizer);
-}
 
 function randomizer(d) {
   var k = d3.max(d) * .02;
