@@ -1,0 +1,34 @@
+h1 {
+    text-align: center;
+}
+
+#first_plot {
+    width: 1000px;
+    margin: none;
+    padding: none;
+}
+
+#first_plot h3 {
+    margin: 0;
+    padding: 0;
+}
+
+#second_plot {
+    width: 1000px;
+    margin: none;
+    padding: none;
+}
+
+#second_plot h3 {
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    text-align: center;
+}
+
+.description {
+    width: 1000px;
+    text-align: center;
+}

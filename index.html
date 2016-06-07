@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="box.js"></script>
+    <script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script>
+    <script type="text/javascript" src="visualize.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+<body>
+  <script type="text/javascript">
+    d3.csv("titanic.csv", draw_first);
+    d3.csv("titanic_passenger_class.csv", draw_second);
+    d3.csv("morley.csv", draw_third);
+  </script>
+
+
+  <h1>Who Survived in Titanic Disaster?</h1>
+
+  <div id="first_plot">
+  </div>
+  <div class="description">
+    <p>The graph above shows the number of Male and Female survived in Titanic disaster.</p>
+  </div>
+
+  <div id="second_plot"></div>
+  <div class="description">
+    <p>The graph </p>
+  </div>
+
+  <div id="third_plot"></div>
+  <div class="description">
+    <p>The third plot</p>
+  </div>
+
+</body>
+</html>
