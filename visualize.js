@@ -64,27 +64,28 @@ function draw_second(data) {
 
 
 
-var margin = {top: 10, right: 50, bottom: 20, left: 50},
-    width = 120 - margin.left - margin.right,
+    var margin = {top: 10, right: 50, bottom: 20, left: 50},
+    width = 250 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
 
-var min = Infinity,
-    max = -Infinity;
+    var min = Infinity,
+        max = -Infinity;
 
+    var chart = d3.box()
+        .whiskers(iqr(1.5))
+        .width(width)
+        .height(height);
 
-var chart = d3.box()
-    .whiskers(iqr(1.5))
-    .width(width)
-    .height(height);
 
 
 function draw_third(csv) {
-    // Third plot
+
+
+
     var data = [];
 
     csv.forEach(function(x) {
       var e = Math.floor(x.Expt - 1),
-          r = Math.floor(x.Run - 1),
           s = Math.floor(x.Speed),
           d = data[e];
       if (!d) d = data[e] = [s];
@@ -93,16 +94,17 @@ function draw_third(csv) {
       if (s < min) min = s;
     });
 
+    console.log(data);
+
     chart.domain([min, max]);
 
-    var svg = d3.select("body").selectAll("svg")
+    var svg = d3.select("#third_plot").selectAll("svg")
         .data(data)
       .enter().append("svg")
         .attr("class", "box")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.bottom + margin.top)
       .append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
         .call(chart);
   
     setInterval(function() {
