@@ -8,59 +8,30 @@
     <script type="text/javascript" src="visualize.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
-  <style>
+  <body>
+    <script type="text/javascript">
+      d3.csv("titanic.csv", draw_first);
+      d3.csv("titanic_passenger_class.csv", draw_second);
+      d3.csv("titanic.csv", draw_third);
+    </script>
+    
+    <h1>Who Survived in Titanic Disaster?</h1>
 
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+    <div id="first_plot">
+    </div>
+    <div class="description">
+      <p>The graph above shows the number of Male and Female survived in Titanic disaster.</p>
+    </div>
 
-.box {
-  font: 10px sans-serif;
-}
+    <div id="second_plot"></div>
+    <div class="description">
+      <p>The graph </p>
+    </div>
 
-.box line,
-.box rect,
-.box circle {
-  fill: #fff;
-  stroke: #000;
-  stroke-width: 1.5px;
-}
+    <div id="third_plot"></div>
+    <div class="description">
+      <p>Passengers' fare seems to be relavant to Survival rate.</p>
+    </div>
 
-.box .center {
-  stroke-dasharray: 3,3;
-}
-
-.box .outlier {
-  fill: none;
-  stroke: #ccc;
-}
-
-</style>
-<body>
-  <script type="text/javascript">
-    d3.csv("titanic.csv", draw_first);
-    d3.csv("titanic_passenger_class.csv", draw_second);
-    d3.csv("titanic.csv", draw_third);
-  </script>
-
-
-  <h1>Who Survived in Titanic Disaster?</h1>
-
-  <div id="first_plot">
-  </div>
-  <div class="description">
-    <p>The graph above shows the number of Male and Female survived in Titanic disaster.</p>
-  </div>
-
-  <div id="second_plot"></div>
-  <div class="description">
-    <p>The graph </p>
-  </div>
-
-  <div id="third_plot"></div>
-  <div class="description">
-    <p>Passengers' fare seems to be relavant to Survival rate.</p>
-  </div>
-
-</body>
+  </body>
 </html>
