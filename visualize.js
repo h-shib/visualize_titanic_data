@@ -60,13 +60,11 @@ function draw_second(data) {
     secondChart.draw();
 };
 
-
-
-
+function draw_third(data) {
 
     var margin = {top: 10, right: 50, bottom: 20, left: 50},
     width = 350 - margin.left - margin.right,
-    height = 1000 - margin.top - margin.bottom;
+    height = 700 - margin.top - margin.bottom;
 
     var min = Infinity,
         max = -Infinity;
@@ -76,44 +74,32 @@ function draw_second(data) {
         .width(width)
         .height(height);
 
+    var plot_data = [];
 
-
-function draw_third(csv) {
-
-
-
-    var data = [];
-
-    csv.forEach(function(x) {
+    data.forEach(function(x) {
       var e = Math.floor(x.Survived),
           s = Math.floor(x.Fare),
-          d = data[e];
-      if (!d) d = data[e] = [s];
+          d = plot_data[e];
+      if (s > 200) return;
+      if (!d) d = plot_data[e] = [s];
       else d.push(s);
       if (s > max) max = s;
       if (s < min) min = s;
     });
 
-    console.log(data);
 
     chart.domain([min, max]);
 
     var svg = d3.select("#third_plot").selectAll("svg")
-        .data(data)
+        .data(plot_data)
       .enter().append("svg")
         .attr("class", "box")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.bottom + margin.top)
       .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
         .call(chart);
-  
-
 };
-
-
-
-
-
 
 function randomizer(d) {
   var k = d3.max(d) * .02;
@@ -135,18 +121,3 @@ function iqr(k) {
     return [i, j];
   };
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
