@@ -3,35 +3,45 @@
   <head>
     <meta charset="utf-8">
     <script src="http://d3js.org/d3.v3.min.js"></script>
-    <script src="box.js"></script>
+    <script src="js/box.js"></script>
     <script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script>
-    <script type="text/javascript" src="visualize.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="js/visualize.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
     <script type="text/javascript">
-      d3.csv("titanic.csv", draw_first);
-      d3.csv("titanic_passenger_class.csv", draw_second);
-      d3.csv("titanic.csv", draw_third);
+      d3.csv("data/titanic.csv", draw_first);
+      d3.csv("data/titanic_passenger_class.csv", draw_second);
+      d3.csv("data/titanic.csv", draw_third);
     </script>
-    
+
     <h1>Who Survived in Titanic Disaster?</h1>
 
     <div id="first_plot">
     </div>
     <div class="description">
-      <p>The graph above shows the number of Male and Female survived in Titanic disaster.</p>
+      <p>The graph above shows the number of Male and Female survived in Titanic disaster.
+        It seems like female was more likely to survive in Titanic accident.
+        I think there are two reasons that caused this tendency.
+        First, female are more likely to be taken on rescue boats than male.
+        Second, female can keep their body temperture efficiently thanks to their body fat.
+        So they could stand the coldness in the sea.
+      </p>
     </div>
+    <br />
+    <br />
 
     <div id="second_plot"></div>
     <div class="description">
-      <p>The graph </p>
+      <p>There seems to be tendency that Upper class passengers have higher survival rate. Passengers those who were in First class might be evacuated preferentially from ship.</p>
     </div>
+    <br />
+    <br />
 
     <div id="third_plot"></div>
     <div class="description">
-      <p>Passengers' fare seems to be relavant to Survival rate.</p>
+      <p>There seems to be relationship between fare and survival rate. The more you pay, the more likely you survive.</p>
     </div>
-
+    <br />
   </body>
 </html>

@@ -66,6 +66,19 @@ function draw_third(data) {
     width = 350 - margin.left - margin.right,
     height = 700 - margin.top - margin.bottom;
 
+    d3.select("#third_plot")
+      .append("h3")
+      .text("Box plot of Passengers' Fare between survived and died");
+
+    d3.select("#third_plot")
+      .append("div")
+      .append("p")
+      .text("Dead")
+      .classed("third_plot_label1", true)
+      .append("p")
+      .text("Survived")
+      .classed("third_plot_label2", true);
+
     var min = Infinity,
         max = -Infinity;
 

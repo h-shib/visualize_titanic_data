@@ -49,13 +49,33 @@ h1 {
     padding: 0;
 }
 
+#third_plot {
+    width: 1000px;
+    margin-left: 100px;
+    padding: none;
+}
+
+#third_plot h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.third_plot_label1 {
+    display: inline-block;
+    margin-left: 155px;
+}
+
+.third_plot_label2 {
+    display: inline-block;
+    margin-left: 300px;
+}
+
 h3 {
     text-align: center;
 }
 
 .description {
-    width: 1000px;
+    width: 700px;
+    margin-left: 150px;
     text-align: center;
 }
-
-
