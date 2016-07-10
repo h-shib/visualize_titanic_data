@@ -11,15 +11,11 @@ function draw_first(data) {
       .append("h3")
       .text("Survival by Gender")
 
-    var margin = 75,
-      width = 1000 - margin,
-      height = 400 - margin;
-
     // First plot
     var firstSvg = d3.select("#first_plot")
         .append("svg")
-          .attr("width", width + margin)
-          .attr("height", height + margin)
+          .attr("width", "100%")
+          .attr("height", "300px")
         .append('g')
           .attr('class','chart');
 
@@ -28,7 +24,7 @@ function draw_first(data) {
     firstChart.addMeasureAxis("y", "count");
     firstChart.addSeries("Survived_text", dimple.plot.bar)
               .addOrderRule(["Survived", "Death"]);
-    firstChart.addLegend(width, 50, 70, 200, "Left");
+    firstChart.addLegend("90%", 50, 70, 200, "Left");
     firstChart.draw();
 };
 
@@ -45,8 +41,8 @@ function draw_second(data) {
     
     var secondSvg = d3.select("#second_plot")
     .append("svg")
-      .attr("width", width + margin)
-      .attr("height", height + margin)
+      .attr("width", "100%")
+      .attr("height", "300px")
     .append('g')
       .attr('class','chart');
 
