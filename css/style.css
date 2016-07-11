@@ -70,10 +70,10 @@ h1 {
 
 /* Third plot */
 #third_plot {
-    width: 1000px;
-    margin-left: 100px;
-    padding: none;
+    width: 400px;
+    margin-left: 50px;
     clear: both;
+    float: left;
 }
 
 #third_plot h3 {
@@ -81,14 +81,24 @@ h1 {
     padding: 0;
 }
 
+.description3 {
+    width: calc(50% - 100px);
+    height: 350px;
+    padding: 70px 50px;
+    text-align: center;
+    float: right;
+}
+
 .third_plot_label1 {
     display: inline-block;
-    margin-left: 155px;
+    margin-left: 75px;
+    height: 20px;
 }
 
 .third_plot_label2 {
     display: inline-block;
-    margin-left: 300px;
+    margin-left: 150px;
+    height: 20px;
 }
 
 h3 {

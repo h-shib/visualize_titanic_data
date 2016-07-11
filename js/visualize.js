@@ -59,8 +59,8 @@ function draw_second(data) {
 function draw_third(data) {
 
     var margin = {top: 10, right: 50, bottom: 20, left: 50},
-    width = 350 - margin.left - margin.right,
-    height = 700 - margin.top - margin.bottom;
+    width = 200 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
 
     d3.select("#third_plot")
       .append("h3")
