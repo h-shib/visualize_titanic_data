@@ -3,44 +3,16 @@
   <head>
     <meta charset="utf-8">
     <script src="http://d3js.org/d3.v3.min.js"></script>
-    <script src="box.js"></script>
+    <script src="js/box.js"></script>
     <script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script>
-    <script type="text/javascript" src="visualize.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="js/visualize_original.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style_original.css">
   </head>
-  <style>
-
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-.box {
-  font: 10px sans-serif;
-}
-
-.box line,
-.box rect,
-.box circle {
-  fill: #fff;
-  stroke: #000;
-  stroke-width: 1.5px;
-}
-
-.box .center {
-  stroke-dasharray: 3,3;
-}
-
-.box .outlier {
-  fill: none;
-  stroke: #ccc;
-}
-
-</style>
 <body>
   <script type="text/javascript">
-    d3.csv("titanic.csv", draw_first);
-    d3.csv("titanic_passenger_class.csv", draw_second);
-    d3.csv("titanic.csv", draw_third);
+    d3.csv("data/titanic.csv", draw_first);
+    d3.csv("data/titanic_passenger_class.csv", draw_second);
+    d3.csv("data/titanic.csv", draw_third);
   </script>
 
 

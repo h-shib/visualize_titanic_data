@@ -1,0 +1,61 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.box {
+    font: 10px sans-serif;
+}
+
+.box line,
+.box rect,
+.box circle {
+    fill: #fff;
+    stroke: #000;
+    stroke-width: 1.5px;
+}
+
+.box .center {
+    stroke-dasharray: 3,3;
+}
+
+.box .outlier {
+    fill: none;
+    stroke: #ccc;
+}
+
+h1 {
+    text-align: center;
+}
+
+#first_plot {
+    width: 1000px;
+    margin: none;
+    padding: none;
+}
+
+#first_plot h3 {
+    margin: 0;
+    padding: 0;
+}
+
+#second_plot {
+    width: 1000px;
+    margin: none;
+    padding: none;
+}
+
+#second_plot h3 {
+    margin: 0;
+    padding: 0;
+}
+
+h3 {
+    text-align: center;
+}
+
+.description {
+    width: 1000px;
+    text-align: center;
+}
+
+
