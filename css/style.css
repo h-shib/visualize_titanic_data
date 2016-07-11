@@ -42,7 +42,7 @@ h1 {
 .description1 {
     width: calc(50% - 100px);
     height: 350px;
-    padding: 20px 50px;
+    padding: 10px 50px;
     text-align: left;
     float: right;
 }
@@ -63,7 +63,7 @@ h1 {
 .description2 {
     width: calc(50% - 100px);
     height: 350px;
-    padding: 20px 50px;
+    padding: 10px 50px;
     text-align: left;
     float: left;
 }
@@ -84,7 +84,7 @@ h1 {
 .description3 {
     width: calc(50% - 100px);
     height: 350px;
-    padding: 70px 50px;
+    padding: 10px 50px;
     text-align: left;
     float: right;
 }

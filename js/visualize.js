@@ -7,10 +7,6 @@ function draw_first(data) {
       width = 1000 - margin,
       height = 400 - margin;
 
-    d3.select("#first_plot")
-      .append("h3")
-      .text("Survival by Gender")
-
     // First plot
     var firstSvg = d3.select("#first_plot")
         .append("svg")
@@ -34,10 +30,6 @@ function draw_second(data) {
     var margin = 75,
       width = 1000 - margin,
       height = 400 - margin;
-
-    d3.select("#second_plot")
-      .append("h3")
-      .text("Survival by Passenger Class")
     
     var secondSvg = d3.select("#second_plot")
     .append("svg")
@@ -52,7 +44,7 @@ function draw_second(data) {
     secondChart.addMeasureAxis("y", "Count");
     secondChart.addSeries("Life and Death", dimple.plot.bar)
                .addOrderRule(["Survived", "Death"]);
-    secondChart.addLegend(width, 50, 70, 200, "Left");
+    secondChart.addLegend("90%", 50, 70, 200, "Left");
     secondChart.draw();
 };
 
@@ -61,10 +53,6 @@ function draw_third(data) {
     var margin = {top: 10, right: 50, bottom: 20, left: 50},
     width = 200 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
-
-    d3.select("#third_plot")
-      .append("h3")
-      .text("Box plot of Passengers' Fare between survived and died");
 
     d3.select("#third_plot")
       .append("div")
