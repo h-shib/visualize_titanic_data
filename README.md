@@ -1,7 +1,7 @@
 # visualize_titanic_data
 
 ## Summary
-Visualization that shows passenger information between those passengers who survived and those who died. Using d3.js and dimple.js.
+Visualization that shows passenger information between those passengers who survived and those who died. There was strong tendency that females and rich people were more likely to be survived. They must be rescued for the first priority. I used d3.js and dimple.js to help description.
 
 
 ## Design
@@ -18,8 +18,6 @@ Replaced titles to above the descriptions and adjusted margin.
 
 
 ## Feedback
-include all feedback you received from others on your visualization from the first sketch to the final visualization
-
 1. well, it seems that females are more likely to survive than males in general and the higher the passenger class the more likely you are to survive, which is the same as the more paid for the ticket the more likely you are to survive. i have no questions about the data because it was a given dataset. the graphic was fairly straightforward and clear, although the box plot is somewhat redundant because its pretty much the same as the passenger class graph. a suggestion would be to try to fit the graphs to the page so that you dont have to scroll down, plus the width of the bars are kind of wide and use up space unecessarily.
 
 2. It is clear that passengers who were in higher grade passenger class were tend to be survived in the disaster. The second plot shows it much. However, I don't get the meaning of the third plot. You should give more description about what each line of the boxplot means.
