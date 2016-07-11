@@ -11,7 +11,7 @@ function draw_first(data) {
     var firstSvg = d3.select("#first_plot")
         .append("svg")
           .attr("width", "100%")
-          .attr("height", "300px")
+          .attr("height", "100%")
         .append('g')
           .attr('class','chart');
 
@@ -34,7 +34,7 @@ function draw_second(data) {
     var secondSvg = d3.select("#second_plot")
     .append("svg")
       .attr("width", "100%")
-      .attr("height", "300px")
+      .attr("height", "100%")
     .append('g')
       .attr('class','chart');
 
